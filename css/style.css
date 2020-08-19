@@ -1,0 +1,186 @@
+body, p, h1, ul, li{
+  padding: 0px;
+  font-size: 13px;
+  text-align: justify;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+ 
+}
+
+body{
+  margin: 0% 18%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  border-radius: 8px;
+  
+}
+
+/* GRID GERAL */
+
+.estrutura{
+  display: grid;
+  grid-template-columns: minmax(300px, 1.3fr) 2fr;
+  grid-template-areas:
+    "logo header"
+    "perfil conteudo"
+    "footer footer"
+  ; 
+ 
+}
+
+@media(max-width: 1200px){
+  .estrutura{
+    grid-template-columns: minmax(300px, 1.3fr) 2fr;
+    grid-template-areas:
+    "logo header"
+    "perfil conteudo"
+    "footer footer"
+    ;
+  }
+
+  body{
+    margin: 0% 0%;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .estrutura{
+    grid-template-columns: 1.5fr;
+    grid-template-areas: 
+      "logo"
+      "perfil"
+      "header"
+      "conteudo"
+      "footer"
+      ;
+    }
+ 
+  img{
+    width: 270px;
+    margin: 0% auto;
+  }
+
+}
+
+
+/* LOGO */
+.logo{
+  grid-area: logo;
+  padding: 30px;
+ margin: auto auto;
+}
+
+
+/* HEADER*/
+
+.header{
+  grid-area: header ;
+ 
+  padding: 30px;
+}
+
+.header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.header nav a {
+  display: block;
+  padding: 10px;
+  color: rgb(202, 180, 230);
+  font-size: 30px;
+  background: rgba(0,0,0,.1);
+  border-radius: 8px;
+
+}
+
+.header nav a:hover{
+  background: cornflowerblue;
+}
+
+.header li {
+  margin: auto auto;
+}
+
+
+/* PERFIL */
+
+.perfil{
+  grid-area: perfil;
+  padding: 30px;  
+  display: block;
+  
+
+}
+
+h1{
+  margin-top: 8%;
+  font-size: 20px;
+  color: rgb(35, 18, 223);
+}
+.info {
+  margin-top: 10%;
+  font-size: 15px;
+}
+
+img{
+  margin-bottom: 10%;
+  margin: auto auto;
+  width: 270px;
+}
+
+/* LOGO*/
+.logo{
+  padding: 30px;
+  text-align: center;
+}
+
+.logo a{
+  font-size: 30px;
+  color: rgb(202, 180, 230);
+  padding: 30px;
+  margin-top: 10px;
+}
+
+
+/* CONTEUDO*/
+
+.conteudo {
+  grid-area: conteudo;
+  margin: 0 auto;
+
+  padding: 30px;
+}
+.conteudo p{
+  font-size: 20px;
+}
+
+.projetos {
+  font-size: 40px;
+}
+
+/* FOOTER*/
+
+.footer{
+  grid-area: footer;
+  
+}
+
+.footer p{
+  text-align: center;
+}
+
+
+
