@@ -67,12 +67,9 @@ img {
       "footer"
       ;
     }
- 
-  img{
-    width: 270px;
-    margin: 0% auto;
+  .header nav ul li a {
+    font-size: 20px;
   }
-
 }
 
 
@@ -80,7 +77,15 @@ img {
 .logo{
   grid-area: logo;
   padding: 30px;
- margin: auto auto;
+  margin: auto auto;
+}
+
+.logo  a{
+  font-family: 'Dancing Script', cursive;
+  width: 120px; 
+}
+.logo a{
+  font-size: 50px;
 }
 
 
@@ -88,7 +93,6 @@ img {
 
 .header{
   grid-area: header ;
- 
   padding: 30px;
 }
 
@@ -102,8 +106,7 @@ img {
   color: rgb(202, 180, 230);
   font-size: 30px;
   background: rgba(0,0,0,.1);
-  border-radius: 8px;
-
+  border-radius: 14px;
 }
 
 .header nav a:hover{
@@ -114,15 +117,12 @@ img {
   margin: auto auto;
 }
 
-
 /* PERFIL */
 
 .perfil{
   grid-area: perfil;
   padding: 30px;  
-  display: block;
-  
-
+  display: block; 
 }
 
 h1{
@@ -130,15 +130,17 @@ h1{
   font-size: 20px;
   color: rgb(35, 18, 223);
 }
+
 .info {
   margin-top: 10%;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 img{
   margin-bottom: 10%;
   margin: auto auto;
   width: 270px;
+  border-radius: 40px;
 }
 
 /* LOGO*/
@@ -160,12 +162,18 @@ img{
 .conteudo {
   grid-area: conteudo;
   margin: 0 auto;
-
   padding: 30px;
+  
 }
 .conteudo p{
   font-size: 20px;
+  text-align: left;
 }
+
+.conteudo a{
+  font-size: 20px;
+}
+
 
 .projetos {
   font-size: 40px;
@@ -175,11 +183,11 @@ img{
 
 .footer{
   grid-area: footer;
-  
 }
 
 .footer p{
   text-align: center;
+  font-size: 20px;
 }
 
 
