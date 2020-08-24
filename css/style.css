@@ -1,47 +1,37 @@
 body, p, h1, ul, li{
   padding: 0px;
-  font-size: 13px;
-
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif; 
+  font-family: Helvetica,Arial, sans-serif;
 }
 
 body{
-  margin: 0% 18%;
-}
-
-li {
-  list-style: none;
+  margin: 0 17%;
 }
 
 a {
   text-decoration: none;
 }
 
-img {
-  display: block;
-  border-radius: 8px;
-  
-}
-
 /* GRID GERAL */
 .estrutura{
   display: grid;
-  grid-template-columns: minmax(200px, 1.5fr) 2fr;
+  grid-template-columns: minmax(200px, 1.2fr) 2fr;
+  grid-template-rows: 110px;
   grid-template-areas:
     "logo header"
     "perfil conteudo"
     "footer footer"
-  ; 
-
+  ;
+  row-gap:  5px;
+  column-gap: 5%;
 }
 
 /* ESTRUTURA PAR O SITE SER RESPOSIVO*/
 @media(max-width: 1200px){
   .estrutura{
-    grid-template-columns: minmax(200px, 1.5fr) 2fr;
+    grid-template-columns: minmax(200px, 1.2fr) 2fr;
     grid-template-areas:
     "logo header"
     "perfil conteudo"
@@ -49,21 +39,16 @@ img {
     ;
   }
   body{
-    margin: 0% 0%;
+    margin: 0% 10px;
   }
-  img{
+  .prefil img{
     margin: auto auto;
-  }
-  .logo_img{
-    margin: auto 18%;
-    align-items: center;
   }
 }
 
-
-@media (max-width: 720px) {
+@media (max-width: 740px) {
   .estrutura{
-    grid-template-columns: 1.5fr;
+    grid-template-columns: 1fr;
     grid-template-areas: 
       "logo"
       "perfil"
@@ -72,39 +57,57 @@ img {
       "footer";
     }
   .header nav ul li a {
-    font-size: 22px;
+    font-size: 20px;
   }
-
+  .info{
+    height: 20px;
+  }  
+  .perfil p{
+    text-align: center;
+  }
 }
-
 
 /* LOGO */
 .logo {
   display: grid;
 }
+.logo a{
+  display: block;
+  margin: auto auto;
+} 
 
+h1{
+  color: rgb(30, 20, 145);
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
+.logo a:hover h1{
+  color: rgb(25, 25, 78);
+}
 
 /* HEADER*/
 .header{
   grid-area: header ;
-  padding: 30px;
+  padding: 24px;
+}
 
+.header li{
+  list-style: none;
 }
 
 .header nav ul {
   display: flex;
   flex-wrap: wrap;
-  
+  margin: 10px auto;
 }
 
 .header nav a {
-  padding: 10px;
+  padding: 15px;
   color: rgb(137, 95, 193);
   font-size: 30px;
   background: rgba(20, 20, 20, 0.1);
   border-radius: 14px;
-  
 }
 
 .header nav a:hover{
@@ -116,56 +119,57 @@ img {
 }
 
 /* PERFIL */
-
 .perfil{
   grid-area: perfil;
-  padding: 10px;  
-  margin-bottom: 1px;
-}
-
-h1{
-  margin-top: 8%;
-  font-size: 20px;
-  color: rgb(35, 18, 223);
-  border-bottom: 1px solid blueviolet;
 }
 
 .info {
-  font-size: 17px;
+  font-size: 14px;
+  text-align: justify;
+  padding: 10px; 
+  font-family: Helvetica,Arial, sans-serif;
 }
 
-img{
-  margin-bottom: 10%;
+.perfil img{
   width: 270px;
   border-radius: 40px;
+  display: block;
+  margin: auto auto;
 }
 
 /* CONTEUDO*/
 .conteudo {
   grid-area: conteudo;
-  padding: 10px;  
 }
-.conteudo p{
-  font-size: 16px;
-}
-
-.titulo p{
+.conteudo p1{
   font-size: 22px;
-  border-bottom: 1.5px solid blueviolet;
- 
-}
-p1 {
-  font-size: 40px;
-  color: rgb(60, 60, 135);
-  border-bottom: 2px solid blueviolet;
+  color: black;
+  border-bottom: 1.5px solid rgb(31, 24, 39);
+  font-family: "Arial black", sans-serif, helvetica;
+  display: block;
 }
 
-p2 {
-  font-size: 40px;
-  color: rgb(60, 60, 135);
-  border-bottom: 2px solid blueviolet;
-  
+p2{
+  font-size: 18px;
 }
+
+.conteudo li .desc{
+  font-size: 13px;
+}
+
+.conteudo  li{
+  border-bottom: 1px solid rgb(31, 24, 39);
+  margin-bottom: 10px;
+}
+
+.conteudo p3{
+  font-size: 22px;
+  color: black;
+  border-bottom: 1.5px solid rgb(31, 24, 39);
+  font-family:"arial black", Helvetica, sans-serif;
+  display: block;
+}
+
 /* FOOTER*/
 .footer {
   grid-area: footer;
@@ -173,9 +177,6 @@ p2 {
 
 .footer p{
   text-align: center;
-  font-size: 20px;
   border-bottom: 2px solid rgb(102, 50, 150);
+  display: block;
 }
-
-
-
