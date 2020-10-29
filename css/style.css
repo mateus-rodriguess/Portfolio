@@ -140,7 +140,7 @@ h1{
 /* CONTEUDO*/
 .conteudo {
   grid-area: conteudo;
-  padding-left: 20px;
+  padding-left: 23px;
 }
 .conteudo p1{
   font-size: 22px;
