@@ -59,7 +59,7 @@ a {
         font-size: 20px;
     }
     .header {
-        margin-top: 10px;
+        margin-top: 150px;
     }
     .info {
         height: 20px;
@@ -67,6 +67,7 @@ a {
     .perfil p {
         text-align: center;
     }
+    
 }
 
 .logo {
